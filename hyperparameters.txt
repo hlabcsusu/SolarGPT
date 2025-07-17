@@ -1,0 +1,31 @@
+Domain-Adaptive LoRA Pretraining (With 100 ApJS PDFs)
+  - Total training time: 5 980.53 s (~1 h 39 m 40 s)
+  - Total steps: 624
+  - Base model: meta-llama/Meta-Llama-3-8B
+  - Learning rate: 0.0002
+  - Batch size: 1
+  - Gradient accumulation steps: 8
+  - Epochs: 3
+  - LoRA rank (r): 16
+  - LoRA α: 32
+  - LoRA dropout: 0.05
+  - GPUs used: 1
+  - GPU total memory: ~23.6 GiB
+  - Peak GPU memory usage: ~12.5 GiB
+
+Decoding (both models)
+  - MAX_NEW_TOKENS: 128
+
+Fine-tuning
+llama3_lora_finetuned (on 5k-QA dataset)
+  - Logged training time: 17,530.17 s (~4 h 52 m 10 s)
+  - Total iterations: 1,872
+  - Base model: meta-llama/Meta-Llama-3-8B
+  - LoRA source dir: ./llama3-dapt-lora3
+  - Learning rate: 2e-4
+  - Batch size: 1
+  - Gradient accumulation steps: 8
+  - Epochs: 3
+  - GPUs used: 1
+  - Total GPU memory: ~25.3 GB
+  - Peak GPU memory usage: ~13.45 GB
